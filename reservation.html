@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | Restaurant App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Restaurant App</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Book a Table</h2>
+        <form action="order-confirmation.html" method="POST">
+            <div class="form-group">
+                <label for="restaurant">Restaurant:</label>
+                <select class="form-control" id="restaurant" name="restaurant">
+                    <option>Restaurant 1</option>
+                    <option>Restaurant 2</option>
+                    <option>Restaurant 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Reservation Date:</label>
+                <input type="date" class="form-control" id="date" name="reservationDate" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" class="form-control" id="time" name="reservationTime" required>
+            </div>
+            <div class="form-group">
+                <label for="people">Number of People:</label>
+                <input type="number" class="form-control" id="people" name="numPeople" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

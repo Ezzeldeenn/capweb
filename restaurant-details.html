@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details | Restaurant App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Restaurant App</a>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Restaurant 1</h1>
+                <p>Location: Downtown City</p>
+                <img src="restaurant1.jpg" class="img-fluid" alt="Restaurant Image">
+                <h3>Menu</h3>
+                <ul>
+                    <li>Pasta - $10</li>
+                    <li>Pizza - $12</li>
+                    <li>Salad - $8</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Reservation</h3>
+                <form action="reservation.html" method="POST">
+                    <div class="form-group">
+                        <label for="date">Select Date:</label>
+                        <input type="date" class="form-control" id="date" name="reservationDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="people">Number of People:</label>
+                        <input type="number" class="form-control" id="people" name="numPeople" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Reserve Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 Restaurant App</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+<script>
+    // JavaScript for validating and submitting the reservation form
+
+document.addEventListener("DOMContentLoaded", function() {
+    const reservationForm = document.querySelector("form");
+
+    reservationForm.addEventListener("submit", function(event) {
+        const reservationDate = document.getElementById("date").value;
+        const numPeople = document.getElementById("people").value;
+
+        if (!reservationDate || numPeople <= 0) {
+            alert("Please fill out all required fields.");
+            event.preventDefault();
+        } else {
+            alert(`Reservation successful for ${numPeople} people on ${reservationDate}`);
+        }
+    });
+});
+
+</script>
+</html>
+

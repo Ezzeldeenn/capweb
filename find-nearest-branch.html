@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearest Branch | Restaurant App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            var mapOptions = {
+                zoom: 10,
+                center: new google.maps.LatLng(-34.397, 150.644)
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
+    </script>
+</head>
+<body onload="initMap()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Restaurant App</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Find the Nearest Branch</h2>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </div>
+</body>
+</html>

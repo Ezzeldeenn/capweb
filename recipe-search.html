@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search | Restaurant App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Restaurant App</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Find a Recipe</h2>
+        <form>
+            <div class="form-group">
+                <label for="recipe-search">Search for a Recipe:</label>
+                <input type="text" class="form-control" id="recipe-search" placeholder="Enter recipe name">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Search</button>
+        </form>
+        <div id="recipe-results" class="mt-4">
+            <!-- Search results will be populated here -->
+        </div>
+    </div>
+</body>
+</html>
